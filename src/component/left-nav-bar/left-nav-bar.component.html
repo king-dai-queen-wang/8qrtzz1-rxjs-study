@@ -1,0 +1,8 @@
+
+<ul class="menu-wrapper">
+    <li class="menu-item" *ngFor="let item of option">
+      <app-left-nav-bar *ngIf="item.children.length > 0" [option]="item.children">
+      </app-left-nav-bar>
+       {{item.name}}
+    </li>
+</ul>
