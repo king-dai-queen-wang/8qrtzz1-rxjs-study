@@ -1,9 +1,10 @@
 export class NodeTree {
-  id ?: string;
-  name ?: string;
-  code ?: string;
-  order ?: number;
-  parentId ?: string;
-  is_parent ?: boolean;
-  children ?: NodeTree[];
+  id ?: string = null;
+  name ?: string = null;
+  code ?: string = null;
+  order ?: number = null;
+  parentId ?: string = null;
+  is_parent ?: boolean = false;
+  children ?: NodeTree[] = [];
+  expendChildren ?: boolean = false;
 }

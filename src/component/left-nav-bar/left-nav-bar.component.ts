@@ -12,4 +12,20 @@ export class LeftNavBarComponent implements OnInit {
   ngOnInit() {
   }
 
+  toggleChildren(item: Menu, option: Menu[], $event: Event) {
+    $event.preventDefault();
+    $event.stopPropagation();
+    this.closeAllMenu(option);
+    item.expendChildren = !item.expendChildren;
+  }
+
+  closeAllMenu(option: Menu[]) {
+    option.map(item => {
+      if (item.children.length > 0) { 
+        this.closeAllMenu(item.children);
+      } else {
+        item.expendChildren = false;
+      }
+    });
+  }
 }

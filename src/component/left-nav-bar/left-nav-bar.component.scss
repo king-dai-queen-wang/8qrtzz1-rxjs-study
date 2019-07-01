@@ -1,0 +1,30 @@
+:host {
+  display: flex;
+  list-style: none;
+  user-select: none;
+  .menu-item-wrapper {
+    position: relative;
+    list-style: none;
+    user-select: none;
+    
+  }
+}
+.menu-item {
+  display: flex;
+  background: pink;
+  padding: 0.5rem;
+  width: 3rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  text-align: left;
+  position: relative;
+  &:hover, &:active {
+    border-bottom: 0.1rem solid red
+  }
+}
+.menu-item-childeren{
+  margin-left: 0.5rem;
+  position: absolute;
+  left: 3rem;
+  top: 0;
+}

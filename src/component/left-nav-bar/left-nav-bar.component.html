@@ -1,8 +1,9 @@
 
-<ul class="menu-wrapper">
-    <li class="menu-item" *ngFor="let item of option">
-      <app-left-nav-bar *ngIf="item.children.length > 0" [option]="item.children">
+<ul class="">
+    <li class="menu-item-wrapper" *ngFor="let item of option" (mouseenter)="toggleChildren(item,option,$event)" (mouseleave) ="closeAllMenu(option)">
+      <a class="menu-item">{{item.name}}</a>
+      <app-left-nav-bar class="menu-item-childeren" *ngIf="item.expendChildren && item.children.length > 0" [option]="item.children">
       </app-left-nav-bar>
-       {{item.name}}
+       
     </li>
 </ul>

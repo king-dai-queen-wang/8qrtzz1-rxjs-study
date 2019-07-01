@@ -3,7 +3,7 @@ export class Menu extends NodeTree {
   constructor() {
     super()
   }
-  url ?: string;
-  icon ?: string;
-  children ?: Menu[];
+  url ?: string = null;
+  icon ?: string = null;
+  children ?: Menu[] = [];
 }
