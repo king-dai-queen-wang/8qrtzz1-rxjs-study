@@ -21,10 +21,9 @@ export class LeftNavBarComponent implements OnInit {
 
   closeAllMenu(option: Menu[]) {
     option.map(item => {
+      item.expendChildren = false;
       if (item.children.length > 0) { 
         this.closeAllMenu(item.children);
-      } else {
-        item.expendChildren = false;
       }
     });
   }
